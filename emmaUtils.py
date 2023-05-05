@@ -64,38 +64,85 @@ def userInputCheck(user_input):
     # Time Complexity : O(n)
     # Space Complexity : O(1)
 
-def instanceMemoryModule(user_input,generated_reply,sentiment):
-    with open('current_convo.json','r+') as file:
-          # First we load existing data into a dict.
-        if len(sentiment) == 0 :
-            try:
+# def instanceMemoryModule(user_input,generated_reply,sentiment,userName):
+    # with open('current_convo.json','r+') as file:
+    #       # First we load existing data into a dict.
+    #     if len(sentiment) == 0 :
+    #         try:
+    #             file_data = json.load(file)
+    #             file_data[userName].append(user_input)
+    #             file_data["EMMA"].append(generated_reply)
+    #             file_data["Emotion"].append(0)
+    #         except:
+    #             file_data = {
+    #             userName : [0,0,0,user_input],
+    #             "EMMA" : [0,0,0,generated_reply],
+    #             "Emotion" : [0,0,0,0]
+    #             }
+    #     else:
+    #         try:
+    #             file_data = json.load(file)
+    #             file_data[userName].append(user_input)
+    #             file_data["EMMA"].append(generated_reply)
+    #             file_data["Emotion"].append(sentiment[1])
+    #         except:
+    #             file_data = {
+    #             userName : [0,0,0,user_input],
+    #             "EMMA" : [0,0,0,generated_reply],
+    #             "Emotion" : [0,0,0,sentiment[1]]
+    #             }
+
+    #     # Sets file's current position at offset.
+    #     file.seek(0)
+    #     # convert back to json.
+    #     json.dump(file_data, file, indent = 4)
+
+    ##new one
+    # with open('current_convo.json', 'r+') as file:
+    #     try:
+    #         file_data = json.load(file)
+    #     except:
+    #         file_data = {
+    #             userName : [0,0,0,user_input],
+    #             "EMMA" : [0,0,0,generated_reply],
+    #             "Emotion" : [0,0,0,0]
+    #         }
+            
+    #     if len(sentiment) == 0:
+    #         file_data[userName].append(user_input)
+    #         file_data["EMMA"].append(generated_reply)
+    #         file_data["Emotion"].append(0)
+    #     else:
+    #         file_data[userName].append(user_input)
+    #         file_data["EMMA"].append(generated_reply)
+    #         file_data["Emotion"].append(sentiment[1])
+            
+    #     file.seek(0)
+    #     json.dump(file_data, file, indent=4)
+
+def instanceMemoryModule(user_input,generated_reply,sentiment,userName):
+    filename = f"{userName}_convo.json"
+        try:
+            with open(filename, 'r+') as file:
                 file_data = json.load(file)
-                file_data["User"].append(user_input)
-                file_data["EMMA"].append(generated_reply)
-                file_data["Emotion"].append(0)
-            except:
-                file_data = {
-                "User" : [0,0,0,user_input],
+        except:
+            file_data = {
+                userName : [0,0,0,user_input],
                 "EMMA" : [0,0,0,generated_reply],
                 "Emotion" : [0,0,0,0]
-                }
+            }
+            
+        if len(sentiment) == 0:
+            file_data[userName].append(user_input)
+            file_data["EMMA"].append(generated_reply)
+            file_data["Emotion"].append(0)
         else:
-            try:
-                file_data = json.load(file)
-                file_data["User"].append(user_input)
-                file_data["EMMA"].append(generated_reply)
-                file_data["Emotion"].append(sentiment[1])
-            except:
-                file_data = {
-                "User" : [0,0,0,user_input],
-                "EMMA" : [0,0,0,generated_reply],
-                "Emotion" : [0,0,0,sentiment[1]]
-                }
-
-        # Sets file's current position at offset.
+            file_data[userName].append(user_input)
+            file_data["EMMA"].append(generated_reply)
+            file_data["Emotion"].append(sentiment[1])
+            
         file.seek(0)
-        # convert back to json.
-        json.dump(file_data, file, indent = 4)
+        json.dump(file_data, file, indent=4)
 
 def previousDialogues():
     # load the current_convo.json 
@@ -106,10 +153,10 @@ def previousDialogues():
           # First we load existing data into a dict.
         try:
             file_data = json.load(file)
-            dialog_length = len(file_data["User"])
+            dialog_length = len(file_data[userName])
             
             # getting the dialogs into lists
-            userInputs = file_data["User"]
+            userInputs = file_data[userName]
             emmaOutputs = file_data["EMMA"]
             # reversing the dialogs 
             reversedUser = userInputs[::-1]
@@ -136,15 +183,15 @@ def previousDialogues():
             return 0
         
 
-def modelIn( user_input,sentiment):
+def modelIn( user_input,sentiment,userName):
     user_input = userInputCheck(user_input)
     
     # Base Prompt Optimization 1 - adding user sentiment to the prompt
     if len(sentiment) != 0:
-        prompt = f"Your name is Emma.You are having a conversation with your friend Anton. He is {sentiment[0]} and feeling {sentiment[1]}.You are empathetic,kind and You should make anton feel happy :"
+        prompt = f"Your name is Emma.You are having a conversation with your friend {userName}. He is {sentiment[0]} and feeling {sentiment[1]}.You are empathetic,kind and You should make {userName} feel happy :"
     
     else:
-        prompt = f"Your name is Emma..You are having a conversation with Anton.You are empathetic,kind and You should make anton feel happy:"
+        prompt = f"Your name is Emma..You are having a conversation with {userName}.You are empathetic,kind and You should make {userName} feel happy:"
 
     
     
@@ -175,9 +222,9 @@ def modelIn( user_input,sentiment):
 
     # Base Prompt Optimization 2 - Including Previous Dialogues
     if (previous_Dialogues != 0):
-        Feeding_Prompt = f"{prompt} \n Anton: {previous_Dialogues[0]}  \n You:{previous_Dialogues[1]}\n Anton: {previous_Dialogues[2]}  \n You:{previous_Dialogues[3]}\n Anton: {previous_Dialogues[4]}  \n You:{previous_Dialogues[5]}\n Anton: {previous_Dialogues[6]}  \n You:{previous_Dialogues[7]} \n Anton: {user_input} \n You:"
+        Feeding_Prompt = f"{prompt} \n {userName}: {previous_Dialogues[0]}  \n You:{previous_Dialogues[1]}\n {userName}: {previous_Dialogues[2]}  \n You:{previous_Dialogues[3]}\n {userName}: {previous_Dialogues[4]}  \n You:{previous_Dialogues[5]}\n {userName}: {previous_Dialogues[6]}  \n You:{previous_Dialogues[7]} \n {userName}: {user_input} \n You:"
     else:
-        Feeding_Prompt = f"{prompt} \n Anton: {user_input} \n You:"
+        Feeding_Prompt = f"{prompt} \n {userName}: {user_input} \n You:"
 
     # rest of the bloom model
 
@@ -202,7 +249,7 @@ def modelIn( user_input,sentiment):
 
     reply = responseCreator( dividedResponse[10])
 
-    instanceMemoryModule(user_input,reply[1],sentiment)
+    instanceMemoryModule(user_input,reply[1],sentiment,userName)
 
     # reply contains a list consists of generative texts
     return reply[1]

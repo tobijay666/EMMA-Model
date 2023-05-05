@@ -13,7 +13,8 @@ def get_text2():
 def get_text():
     text = request.json
     input_txt = text["message"]
-    reply = baseEMMA(input_txt)
+    user_name = text["sender"]
+    reply = baseEMMA(input_txt,user_name)
     response = {'sender': 'EMMA', 'message': reply}
     return response
 

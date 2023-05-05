@@ -35,7 +35,7 @@ model.load_state_dict(model_state)
 model.eval()
 
 # The Base function for replies
-def baseEMMA(inputTxt):
+def baseEMMA(inputTxt,userName):
     while True:
         
         user_input = inputTxt.lower()
@@ -75,7 +75,8 @@ def baseEMMA(inputTxt):
                     # Analysing the User's sentiment
                     sentiment_Analysis = sentimentAnalyser(user_input)
                     #  Inserting the instance into the memory module
-                    instanceMemoryModule(user_input,modelResponse,sentiment_Analysis)
+                    instanceMemoryModule(user_input,modelResponse,sentiment_Analysis,userName)
+
 
 
 
@@ -83,7 +84,7 @@ def baseEMMA(inputTxt):
         else:
             # Analysing the User's sentiment
             sentiment_Analysis = sentimentAnalyser(user_input)   
-            response = modelIn(user_input,sentiment_Analysis)
+            response = modelIn(user_input,sentiment_Analysis,userName)
             
             # actual final response from the model
             return (f"{response}")
