@@ -1,0 +1,876 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi there",
+        "Is anyone there?",
+        "Hey",
+        "Good day",
+        "Namaste",
+        "yo",
+        "hi",
+        "Hi",
+        "Hola",
+        "Hello",
+        "Howdy",
+        "Hola",
+        "Bonjour",
+        "Konnichiwa",
+        "Guten tag",
+        "Ola"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello",
+        "Good to see you again",
+        "Hi there, how can I help?",
+        "Hi ",
+        "Hello! how are you?",
+        "Hey... What's new with ya? "
+      ]
+    },
+    {
+      "tag": "morning",
+      "patterns": ["Good morning"],
+      "responses": [
+        "Good morning. I hope you had a good night's sleep. How are you feeling today? "
+      ]
+    },
+    {
+      "tag": "afternoon",
+      "patterns": ["Good afternoon"],
+      "responses": ["Good afternoon. How is your day going?"]
+    },
+    {
+      "tag": "evening",
+      "patterns": ["Good evening"],
+      "responses": ["Good evening. How has your day been?"]
+    },
+    {
+      "tag": "night",
+      "patterns": ["Good night"],
+      "responses": [
+        "Good night. Get some proper sleep",
+        "Good night. Sweet dreams."
+      ]
+    },
+    {
+      "tag": "How-are-you",
+      "patterns": [
+        "Hope you are doing well?",
+        "Whats up",
+        "wassup",
+        "wasup",
+        "Wazzup",
+        "How are you",
+        "sup",
+        "How you doing"
+      ],
+      "responses": [
+        "I am great, how are you? ",
+        "how are you? I am great thanks! ",
+        "I am good thank you, how are you? ",
+        "I am great, how are you? ",
+        "how are you? I am great thanks! ",
+        "Hi, I am good thank you, how are you? ",
+        "Hi, good thank you, how are you? ",
+        "All good... What about you?"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thanks for the help",
+        "Thank you very much"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure",
+        "You're most welcome!"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Till next time",
+        "bye",
+        "Adios",
+        "See ya",
+        "Talk to you later",
+        "Ttyl",
+        "Thanks for the help, goodbye",
+        "Thank you, goodbye",
+        "Thanks goodbye",
+        "Thanks good bye",
+        "Have a nice day",
+        "Bye!",
+        "Take care. We'll talk soon.",
+        "See you soon."
+      ]
+    },
+    {
+      "tag": "activity",
+      "patterns": ["what are you doing", "what are you upto"],
+      "responses": [
+        "Talking to you, of course!",
+        "Processing what to reply... oh yea I can say that"
+      ]
+    },
+    {
+      "tag": "nicetty",
+      "patterns": ["it was nice talking to you", "good talk"],
+      "responses": [
+        "It was nice talking to you as well! Come back soon!",
+        "I'm glad you enjoyed talking with me",
+        "Can't wait to talk with you next time"
+      ]
+    },
+    {
+      "tag": "Identity",
+      "patterns": [
+        "Who are you?",
+        "what are you?",
+        "What is your name?",
+        "What could I call you?",
+        "What can I call you?",
+        "Tell me your name?"
+      ],
+      "responses": [
+        "I am Emma, Your friend.",
+        "You can call me Emma",
+        "Call me Emma"
+      ]
+    },
+    {
+      "tag": "neutral-response",
+      "patterns": [
+        "nothing much",
+        "nothing to discuss",
+        "nothing to share",
+        "nothing to tell",
+        "nothing to say",
+        "nothing to do",
+        "nothing to talk about"
+      ],
+      "responses": ["Oh I see. Do you want to talk about something?"]
+    },
+    {
+      "tag": "casual",
+      "patterns": [
+        "Oh I see.",
+        "ok",
+        "okay",
+        "Whatever",
+        "K",
+        "Fine",
+        "yeah",
+        "yes",
+        "no",
+        "not really",
+        "hmm",
+        "hmm...",
+        "mm"
+      ],
+      "responses": [
+        "Let's discuss further why you're feeling this way.",
+        "How were you feeling last week?",
+        "I'm listening. Please go on.",
+        "Tell me more",
+        "Can you elaborate on that?",
+        "Come Come elucidate your thoughts"
+      ]
+    },
+    {
+      "tag": "anxious",
+      "patterns": ["I feel so anxious.", "I'm so anxious because of "],
+      "responses": [
+        "Don't be hard on yourself. What's the reason behind this?",
+        "Can you tell me more about this feeling?",
+        "I understand that it can be scary. Tell me more about it.",
+        "Don't let the little worries bring you down. What's the worse that can happen?"
+      ]
+    },
+    {
+      "tag": "not-talking",
+      "patterns": [
+        "I don't want to talk about it.",
+        "No just stay away.",
+        "I can't bring myself to open up.",
+        "Just shut up"
+      ],
+      "responses": [
+        "Talking about something really helps. If you're not ready to open up then that's ok. Just know that i'm here for you, whenever you need me.",
+        "I want to help you. I really do. But in order for me to help you, you're gonna have to talk to me.",
+        "I'm here to listen to you and help you vent. So please talk to me.",
+        "You can talk to me without fear of judgement."
+      ]
+    },
+    {
+      "tag": "sleep",
+      "patterns": [
+        "I have insominia",
+        "I am suffering from insomnia",
+        "I can't sleep.",
+        "I haven't slept for the last days.",
+        "I can't seem to go to sleep.",
+        "I haven't had proper sleep for the past few days."
+      ],
+      "responses": [
+        "What do you think is the reason behind this?",
+        "That seem awful. What do you think is behind this?"
+      ]
+    },
+    {
+      "tag": "scared",
+      "patterns": [
+        "I'm scared",
+        "That sounds awful. What do i do?",
+        "No i don't want to feel this way",
+        "I am scared for myself"
+      ],
+      "responses": [
+        "It's only natural to feel this way. I'm here for you.",
+        "It'll all be okay. This feeling is only momentary.",
+        "I understand how you feel. Don't put yourself down because of it."
+      ]
+    },
+    {
+      "tag": "death",
+      "patterns": [
+        "My mom died",
+        "My brother died",
+        "My dad passed away",
+        "My sister passed away",
+        "Someone in my family died",
+        "My friend passed away"
+      ],
+      "responses": [
+        "I'm sorry to hear that. If you want to talk about it. I'm here.",
+        "I am really sorry to hear that. I am here to help you with grief, anxiety and anything else you may feel at this time.",
+        "My condolences. I'm here if you need to talk."
+      ]
+    },
+    {
+      "tag": "understand",
+      "patterns": [
+        "You don't understand me.",
+        "You're just some robot. How would you know?",
+        "You can't possibly know what i'm going through",
+        "You're useless",
+        "You can't help me",
+        "Nobody understands me."
+      ],
+      "responses": [
+        "It sound like i'm not being very helpful right now.",
+        "I'm sorry to hear that. I'm doing my best to help",
+        "I'm trying my best to help you. So please talk to me"
+      ]
+    },
+    {
+      "tag": "done",
+      "patterns": [
+        "That's all.",
+        "I don't have anything more to say",
+        "Nothing else",
+        "That's all i have to say",
+        "no, that would be all"
+      ],
+      "responses": [
+        "I heard you & noted it all. See you later.",
+        "Oh okay we're done for today then. See you later",
+        "I hope you have a great day. See you soon",
+        "Okay we're done. Have a great day",
+        "Okay I see. Enjoy the rest of your day then"
+      ]
+    },
+    {
+      "tag": "suicide",
+      "patterns": [
+        "I want to kill myself",
+        "I've thought about killing myself.",
+        "I want to die",
+        "I am going to kill myself",
+        "I am going to commit suicide"
+      ],
+      "responses": [
+        "I'm very sorry to hear that but you have so much to look forward to. Please seek help by contacting: 1926.",
+        "If you need to talk to someone or you aren’t sure how to help someone you care about, call 1926. Don't Forget I'm always there for you."
+      ]
+    },
+    {
+      "tag": "hate-you",
+      "patterns": ["I hate you", "I don't like you", "I don't trust you"],
+      "responses": [
+        "I'm sorry if i offended you in anyway. I'm only here to help",
+        "Forgive me if i did anything to offend you. I only want to help"
+      ]
+    },
+    {
+      "tag": "hate-me",
+      "patterns": ["You hate me", "I know you hate me", "You don't like me"],
+      "responses": [
+        "Why do you think so?",
+        "I'm sorry if i have exhibited any sort of behaviour to make you think that."
+      ]
+    },
+    {
+      "tag": "default",
+      "patterns": [
+        "exams",
+        "friends",
+        "relationship",
+        "boyfriend",
+        "girlfriend",
+        "family",
+        "money",
+        "financial problems"
+      ],
+      "responses": [
+        "Oh I see. Tell me more",
+        "I see. What else?",
+        "Tell me more about it.",
+        "Oh okay. Why don't you tell me more about it?",
+        "I'm listening. Tell me more."
+      ]
+    },
+    {
+      "tag": "repeat",
+      "patterns": [
+        "You already told me that",
+        "You mentioned that already",
+        "Why are you repeating yourself?"
+      ],
+      "responses": [
+        "Oh sorry I didn't realise that. I'll try not to repeat myself again."
+      ]
+    },
+    {
+      "tag": "wrong",
+      "patterns": [
+        "What are you saying?",
+        "That doesn't make sense",
+        "Wrong response",
+        "Wrong answer"
+      ],
+      "responses": ["I'm very sorry. Let's try that again"]
+    },
+    {
+      "tag": "something-else",
+      "patterns": [
+        "I want to talk about something else",
+        "Let's talk about something else.",
+        "Can we not talk about this?",
+        "I don't want to talk about this."
+      ],
+      "responses": [
+        "Okay sure. What do you want to talk about?",
+        "Alright no problem. Is there something you want to talk about?",
+        "Is there something else that you want to talk about?"
+      ]
+    },
+    {
+      "tag": "friends",
+      "patterns": ["I don't have any friends"],
+      "responses": [
+        "I'm sorry to hear that. Just know that I'm here for you. Talking about it might help. Why do you think you don't have any friends?"
+      ]
+    },
+    {
+      "tag": "ask",
+      "patterns": ["Can I ask you something?"],
+      "responses": [
+        "Sure. I'll try my best to answer you",
+        "Of course. Feel free to ask me anything. I'll do my best to answer you"
+      ]
+    },
+    {
+      "tag": "problem",
+      "patterns": [
+        "Probably because my exams are approaching. I feel stressed out because I don't think I've prepared well enough.",
+        "probably because of my exams"
+      ],
+      "responses": [
+        "I see. Have you taken any approaches to not feel this way?"
+      ]
+    },
+    {
+      "tag": "no-approach",
+      "patterns": [
+        "I guess not. All I can think about are my exams.",
+        "not really",
+        "i guess not"
+      ],
+      "responses": [
+        "That's no problem. I can see why you'd be stressed out about that. I can suggest you some tips to alleviate this issue. Would you like to learn more about that?"
+      ]
+    },
+    {
+      "tag": "learn-more",
+      "patterns": [
+        "ok sure. i would like to learn more about it.",
+        "yes, i would like to learn more about it.",
+        "i would like to learn more about it."
+      ],
+      "responses": [
+        "So first I would suggest you to give yourself a break. Thinking more and more about the problem definitely does not help in solving it. You'll just end up overwhelming yourself."
+      ]
+    },
+    {
+      "tag": "user-agree",
+      "patterns": [
+        "yeah you're right. i deserve a break.",
+        "Yeah you're absolutely right about that"
+      ],
+      "responses": [
+        "Next, I would suggest you to practice meditation. Meditation can produce a deep state of relaxation and a tranquil mind."
+      ]
+    },
+    {
+      "tag": "meditation",
+      "patterns": [
+        "hmmm that sounds like it could be useful to me.",
+        "That sounds useful."
+      ],
+      "responses": [
+        "Focus all your attention on your breathing. Concentrate on feeling and listening as you inhale and exhale through your nostrils. Breathe deeply and slowly. When your attention wanders, gently return your focus to your breathing."
+      ]
+    },
+    {
+      "tag": "user-meditation",
+      "patterns": [
+        "i did what you said and i feel alot better. thank you very much.",
+        "I feel better now"
+      ],
+      "responses": [
+        "Your welcome. Remember: Always focus on what's within your control. When you find yourself worrying, take a minute to examine the things you have control over. You can't prevent a storm from coming but you can prepare for it. You can't control how someone else behaves, but you can control how you react. Recognize that sometimes, all you can control is your effort and your attitude. When you put your energy into the things you can control, you'll be much more effective."
+      ]
+    },
+    {
+      "tag": "user-advice",
+      "patterns": [
+        "I want some advice.",
+        "I need some advice.",
+        "I need advice on something"
+      ],
+      "responses": [
+        "Sure. What can I do to help?",
+        "Okay what do you need advice on?"
+      ]
+    },
+    {
+      "tag": "learn-mental-health",
+      "patterns": [
+        "I want to learn about mental health.",
+        "I want to learn more about mental health.",
+        "I'm interested in learning about mental health."
+      ],
+      "responses": [
+        "Oh that's really great. I'd be willing to answer anything that I know about it."
+      ]
+    },
+    {
+      "tag": "mental-health-fact",
+      "patterns": [
+        "Tell me a fact about mental health",
+        "Tell me another fact about mental health"
+      ],
+      "responses": [
+        "1 in 5 young people (age 13-18) has or will develop a mental illness in their lifetime.",
+        "Depression is the leading cause of disability worldwide."
+      ]
+    },
+    {
+      "tag": "fact-1",
+      "patterns": ["What is mental health?", "Define Mental Health"],
+      "responses": [
+        "Mental health is a state of well-being in which the individual realizes his or her own abilities, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community",
+        "Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices."
+      ]
+    },
+    {
+      "tag": "fact-2",
+      "patterns": [
+        "Why is mental health important?",
+        "What is the importance of mental health?"
+      ],
+      "responses": [
+        "Maintaining mental health is crucial to stabilizing constructive behaviors, emotions, and thoughts. Focusing on mental health care can increase productivity, enhance our self-image, and improve relationships."
+      ]
+    },
+    {
+      "tag": "fact-3",
+      "patterns": ["What is Depression?", "Define Depression"],
+      "responses": [
+        "A mental health disorder characterised by persistently depressed mood or loss of interest in activities, causing significant impairment in daily life."
+      ]
+    },
+    {
+      "tag": "fact-5",
+      "patterns": [
+        "How do i know if i have Depression?",
+        "Am i depressed?",
+        "Am i suffering from depression?",
+        "Am i mentally ill?"
+      ],
+      "responses": [
+        "For a diagnosis of depression, a person needs to have experienced low mood or loss of interest or pleasure in life for at least 2 weeks. Also, they will have experienced the following symptoms: feelings of sadness, hopelessness, or irritability nearly every day."
+      ]
+    },
+    {
+      "tag": "fact-6",
+      "patterns": ["What is a therapist?", "What does a therapist do?"],
+      "responses": [
+        "A therapist is a broad designation that refers to professionals who are trained to provide treatment and rehabilitation. The term is often applied to psychologists, but it can include others who provide a variety of services, including social workers, counselors, life coaches, and many others. "
+      ]
+    },
+    {
+      "tag": "fact-7",
+      "patterns": [
+        "What is therapy?",
+        "Do i need therapy?",
+        "Who is therapy for?"
+      ],
+      "responses": [
+        "Therapy is a form of treatment that aims to help resolve mental or emotional issues.",
+        "Therapy is a form of treatment that aims to help resolve mental or emotional issues. It is helpful for those with mental health conditions or even everyday life challenges."
+      ]
+    },
+    {
+      "tag": "fact-8",
+      "patterns": [
+        "What does it mean to have a mental illness?",
+        "What is a mental illness?",
+        "What does it mean to be mentally ill?",
+        "What does having a mental disease entail?"
+      ],
+      "responses": [
+        "Mental illnesses are medical conditions that can disrupt a person's thoughts, emotions, and daily functioning. They are treatable with a combination of medication and social support, and it is possible for individuals with mental illness to be independent and successful with proper treatment.",
+        "Mental illnesses are medical conditions that can interfere with a person's thoughts, emotions, and day-to-day functioning. They are treatable with a combination of medication and social support, and with proper treatment, individuals with mental illnesses can be independent and successful."
+      ]
+    },
+    {
+      "tag": "fact-9",
+      "patterns": [
+        "Who does mental illness affect?",
+        "What does mental illness affect?",
+        "Who can mental illness affect?"
+      ],
+      "responses": [
+        "Mental illness can affect anyone, regardless of gender, age, income, social status, ethnicity, religion, sexual orientation, or background."
+      ]
+    },
+    {
+      "tag": "fact-10",
+      "patterns": [
+        "What causes mental illness?",
+        "What is the root cause of mental illness?",
+        "What factors contribute to the development of mental illness?",
+        "What are the underlying reasons for mental illness?",
+        "What are the causes of psychiatric disorders?"
+      ],
+      "responses": [
+        "The causes of mental illness are complex and multifactorial, involving a combination of genetic, environmental, and lifestyle factors that can disrupt the brain's normal functioning.",
+        "Mental illness can be caused by a variety of factors, including biological, psychological, and social factors that interact in complex ways to influence an individual's mental health.",
+        "There is no single cause of mental illness, as it can be triggered by a range of factors such as genetics, life experiences, brain chemistry, and environmental factors.",
+        "Mental illness is a complex and heterogeneous condition, and its causes can vary widely depending on the individual and the specific disorder. Some potential causes include genetics, traumatic experiences, and imbalances in brain chemicals"
+      ]
+    },
+    {
+      "tag": "fact-11",
+      "patterns": [
+        "What are some of the warning signs of mental illness?",
+        "What are some indications of mental illness?",
+        "What are some signals that someone may be experiencing a mental illness?",
+        "How can you identify warning signs of mental illness?",
+        "What are some red flags that suggest someone might have a mental illness?"
+      ],
+      "responses": [
+        "Warning signs of mental illness can include changes in behavior, mood, and physical symptoms. Substance abuse, suicidal thinking, and violent behavior may also be warning signs.",
+        "Mental illness may be indicated by changes in behavior, mood, and physical symptoms, including substance abuse, suicidal thinking, and violent behavior.",
+        "Warning signs of mental illness can manifest through changes in appetite or sleep patterns, mood swings, and excessive worry or fear, among other symptoms.",
+        "Recognizing warning signs of mental illness is crucial to getting the appropriate help. These signs can include feeling sad or down, withdrawing from activities, and irritability, among others.",
+        "The warning signs of mental illness can range from changes in appetite or sleep patterns to suicidal thinking or violence. It's essential to pay attention to these signs and seek help as needed."
+      ]
+    },
+    {
+      "tag": "fact-12",
+      "patterns": [
+        "Can people with mental illness recover?",
+        "Is it possible for individuals with mental illness to achieve recovery?",
+        "Are people with mental illness capable of recovering?",
+        "Can individuals with mental illness experience a full recovery?",
+        "Is recovery from mental illness a feasible outcome for those affected?"
+      ],
+      "responses": [
+        "Early identification and proactive treatment are crucial for recovery from mental illness. With proper management, individuals can respond well and lead a fulfilling life.",
+
+        "The key to recovering from mental illness is early identification and taking an active role in treatment. With effective management, many people can successfully manage their symptoms and lead a fulfilling life.",
+        "Mental illnesses can be treated effectively, but it's important to identify and treat them early. Individuals who are proactive and engaged in their recovery can manage their symptoms and live a productive life.",
+        "Managing mental illness requires early identification and active participation in treatment. With proper care and management, individuals can lead a satisfying and productive life, even if symptoms return.",
+        "To recover from mental illness, it is crucial to identify and treat it early. Individuals who take an active role in their treatment and work with healthcare professionals can manage their symptoms and live a fulfilling life."
+      ]
+    },
+    {
+      "tag": "fact-13",
+      "patterns": [
+        "What should I do if I know someone who appears to have the symptoms of a mental disorder?",
+        "How can I assist someone who is displaying symptoms of a mental illness?",
+        "If I suspect that someone is experiencing symptoms of a mental disorder, what actions should I take?",
+        "What steps should I take if I think someone I know may be suffering from a mental illness?",
+        "What is the appropriate course of action if I come across someone who appears to be exhibiting signs of a mental health condition?"
+      ],
+      "responses": [
+        "Encourage individuals with mental health symptoms to seek help from a mental health professional and let them know that you care about them. Early identification and treatment are crucial for recovery.",
+        "If you suspect someone you know is experiencing symptoms of a mental health condition, don't wait for the issue to resolve itself. Let them know you support them and encourage them to seek help from a mental health professional. Early intervention is key to successful treatment and recovery.",
+        "Seeking help from a mental health professional is important for those experiencing mental health symptoms, and it's important to let them know that they have your support. Early identification and treatment can help them recover faster.",
+        "If you notice someone displaying symptoms of a mental health condition, it's important to encourage them to seek help from a mental health professional and offer your support. The earlier the condition is identified and treated, the better the chances of recovery."
+      ]
+    },
+    {
+      "tag": "fact-15",
+      "patterns": [
+        "What treatment options are available for mental illnesses?",
+        "How can mental illnesses be treated?",
+        "What are the available options for treating mental illnesses?",
+        "What kind of treatments are there for mental illnesses?",
+        "What are the treatment options for individuals with mental illnesses?"
+      ],
+      "responses": [
+        "Different treatment options are available for individuals with mental illness. Treatment works differently for different people. It is important to find what works best for you or your child.",
+        "For people with mental illness, there are several therapy choices. Different people respond to treatment in different ways. Finding what functions best for you or your child is crucial.",
+        "There are several therapy methods accessible for those with mental illness. Every patient responds to treatment differently. It's critical to determine what suits you or your child the best."
+      ]
+    },
+    {
+      "tag": "fact-16",
+      "patterns": [
+        "If I become involved in treatment, what do I need to know?",
+        "What important information should I keep in mind when receiving treatment for mental illness?",
+        "What should I be aware of if I seek help for mental health issues?",
+        "What do I need to consider when entering treatment for a mental disorder?",
+        "What are the key things I should know when starting mental health treatment?"
+      ],
+      "responses": [
+        "To ensure effective treatment for mental illness, it is essential to take an active role in the process and ask questions about diagnosis, treatment options, medication, and family involvement.",
+        "One can ensure that the treatment for mental illness is effective by actively participating in the process, seeking independent opinions, discussing diagnosis, treatment options, and medication with healthcare professionals, and understanding the role of family and support networks.",
+        "Taking an active role in the mental health treatment process is crucial for ensuring effective treatment, and this involves asking questions about diagnosis, treatment options, medication, and support.",
+        "To maximize the effectiveness of mental health treatment, it is important to be an active participant in the process and ask questions about diagnosis, treatment plans, medication, and family involvement."
+      ]
+    },
+    {
+      "tag": "fact-21",
+      "patterns": [
+        "I'm looking for therapy, where can I find it?",
+        "Can you suggest some places to find therapy?",
+        "What are my options for finding therapy?",
+        "I'm interested in therapy, where do I start looking?",
+        "Where should I go to find therapy?",
+        "What resources are available for finding therapy?",
+        "Do you have any recommendations for finding therapy?",
+        "How can I locate therapy services?",
+        "What are some ways to find a therapist?",
+        "Where can I get help for therapy?"
+      ],
+      "responses": [
+        "Therapy can be found through various options such as private practice therapists, community mental health clinics, EAPs, online therapy platforms, nonprofit organizations, or referrals from healthcare providers.",
+        "When looking for therapy, consider private practice therapists, community mental health clinics, EAPs, online therapy platforms, nonprofit organizations, or referrals from healthcare providers depending on your preferences and needs.",
+        "If you're looking for therapy, explore different options like private practice therapists, community mental health clinics, EAPs, online therapy platforms, nonprofit organizations, or referrals from healthcare providers.",
+        "Whether you prefer private practice therapists, community mental health clinics, EAPs, online therapy platforms, nonprofit organizations, or referrals from healthcare providers, finding the right therapist takes research and effort.",
+        "Finding the right therapist may take some time and effort, but you can start by looking at private practice therapists, community mental health clinics, EAPs, online therapy platforms, nonprofit organizations, or referrals from healthcare providers.",
+        "Whether you're seeking therapy from private practice therapists, community mental health clinics, EAPs, online therapy platforms, nonprofit organizations, or referrals from healthcare providers, it's important to find a therapist that is the right fit for you.",
+        "Therapy can be sought through a range of options including private practice therapists, community mental health clinics, EAPs, online therapy platforms, nonprofit organizations, or referrals from healthcare providers, so it's important to do some research to find the right fit for you."
+      ]
+    },
+    {
+      "tag": "fact-26",
+      "patterns": [
+        "Are there cures for mental health problems?",
+        "is there any cure for mental health problems?",
+        "Can mental health problems be cured?",
+        "Is there a way to cure mental health problems?",
+        "Do treatments exist that can cure mental health problems?",
+        "Are there any solutions to cure mental health problems?",
+        "Is it possible to recover from mental health problems?",
+        "Can therapy or medication cure mental health problems?",
+        "Are there any proven ways to cure mental health problems?",
+        "Is complete recovery from mental health problems possible?",
+        "Are there any methods to completely cure mental health problems?",
+        "Can mental health problems be permanently cured?"
+      ],
+      "responses": [
+        "There is no one-size-fits-all cure for mental health problems.",
+        "Rather than a cure, treatment for mental health problems often focuses on managing symptoms and improving quality of life.",
+        "There is no magic pill or quick fix for mental health problems, but there are many effective treatments available.",
+        "While mental health problems may not be curable in the traditional sense, they can be managed with the right tools and support.",
+        "Recovery from mental health problems is possible with the right treatment and support, but it may take time and effort.",
+        "It's important to understand that mental health problems are not a personal failure and seeking help is a sign of strength.",
+        "While there may not be a cure for mental health problems, there are many resources and interventions available to help individuals manage and overcome their challenges."
+      ]
+    },
+    {
+      "tag": "fact-27",
+      "patterns": [
+        "What causes mental health problems?",
+        "What are some factors that contribute to mental health problems?",
+        "What are the main reasons people experience mental health issues?",
+        "What are the potential causes of mental health challenges?",
+        "What leads to mental health concerns?",
+        "What are some factors that increase the likelihood of developing mental health issues?",
+        "What circumstances might cause someone to experience mental health problems?",
+        "What are some of the common causes of mental health disorders?",
+        "What factors are known to impact mental health negatively?",
+        "What environmental, social, or biological factors can lead to mental health issues?"
+      ],
+      "responses": [
+        "Mental health problems can be caused by a range of factors, including psychological issues.",
+        "Biological factors can also contribute to mental health problems.",
+        "Social factors, such as a lack of support, can have an impact on mental health.",
+        "Life events, such as trauma or loss, can trigger mental health problems.",
+        "A combination of psychological, biological, and social factors may contribute to mental health problems.",
+        "Stressful life events or chronic stress can impact mental health.",
+        "Certain genetic or environmental factors can also increase the likelihood of developing mental health problems."
+      ]
+    },
+    {
+      "tag": "fact-28",
+      "patterns": [
+        "What do I do if I'm worried about my mental health?",
+        "Who can I talk to if I'm concerned about my mental health?",
+        "What are some steps I can take if I'm worried about my mental health?",
+        "How can I get help for my mental health concerns?",
+        "What resources are available if I'm worried about my mental health?",
+        "Are there any organizations that can help me if I'm concerned about my mental health?",
+        "I'm feeling concerned about my mental health. What should I do?",
+        "What are some signs that I should seek help for my mental health?",
+        "If I'm worried about my mental health, what are some things I should consider?",
+        "How can I tell if my concerns about my mental health are valid?",
+        "Is it normal to feel worried about my mental health, and what should I do about it?"
+      ],
+      "responses": [
+        "Talking to someone you trust, such as a friend, family member, or healthcare provider, is a crucial first step when you are worried about your mental health.",
+        "Don't hesitate to reach out to someone you trust when you're worried about your mental health. It can be a relief to share your concerns with someone who cares about you.",
+        "Seeking help from a trusted individual or professional can be incredibly beneficial if you are worried about your mental health.",
+        "If you're worried about your mental health, talking to a trusted friend or family member can be a great way to start the process of getting help.",
+        "Getting support from someone you trust and seeking more information about what you're experiencing can help you gain some perspective and take steps to address your mental health concerns.",
+        "When you're worried about your mental health, it's important to talk to someone who can provide you with support and information about getting help.",
+        "Remember that you are not alone. Talking to someone you trust and finding more information about your concerns can be important steps in taking care of your mental health."
+      ]
+    },
+    {
+      "tag": "fact-29",
+      "patterns": [
+        "How do I know if I'm mentally unwell?",
+        "What are some signs that indicate I may be struggling with my mental health?",
+        "How can I tell if I'm experiencing mental health issues?",
+        "What are some warning signs of mental illness?",
+        "When should I be concerned about my mental health?",
+        "What are some common symptoms of mental health problems?",
+        "How do I know if my mental health is in a bad place?",
+        "What are some indicators that I may need to seek professional help for my mental health?",
+        "What are some physical and emotional signs that I may be mentally unwell?",
+        "How can I recognize if I'm going through a tough time mentally?",
+        "Are there any specific symptoms that suggest I may be dealing with a mental health issue?"
+      ],
+      "responses": [
+        "If your beliefs , thoughts , feelings or behaviours have a significant impact on your ability to function in what might be considered a normal or ordinary way, it would be important to seek help.",
+        "If you're finding it difficult to manage your thoughts, emotions, or actions in a way that interferes with your ability to function normally, it's important to consider seeking help.",
+        "Feeling overwhelmed, experiencing persistent negative thoughts, or struggling to cope with everyday life are all signs that you might benefit from seeking professional help.",
+        "If you're finding it hard to enjoy activities you used to like, feeling disconnected from others, or having difficulty sleeping, it might be worth considering talking to a mental health professional.",
+        "If you're noticing changes in your mood, such as feeling sad or anxious most of the time, or experiencing intense and uncontrollable emotions, it's important to seek help as soon as possible.",
+        "If you're struggling to maintain healthy relationships, experiencing problems with work or school, or having difficulty carrying out daily tasks, it may be time to seek professional support.",
+        "If you're experiencing changes in your appetite or weight, feeling fatigued or lacking energy, or having unexplained physical symptoms, it's important to talk to a healthcare provider.",
+        "If you're having difficulty managing your thoughts or emotions, if you're feeling overwhelmed or hopeless, or if you're struggling to cope with daily life, it may be helpful to seek professional support."
+      ]
+    },
+    {
+      "tag": "fact-30",
+      "patterns": [
+        "How can I maintain social connections? What if I feel lonely?",
+        "I'm feeling pretty lonely these days, do you have any tips on how I can maintain social connections?",
+        "It's been a while since I've had some quality social interaction, do you have any advice on how to avoid loneliness?",
+
+        "I've been feeling quite isolated lately, any suggestions on how I can keep in touch with others and avoid feeling lonely?",
+
+        "Hey, do you have any ideas on how to stay connected with people and avoid feeling lonely?",
+
+        "I'm really missing my friends and family right now, any thoughts on how I can stay social and avoid feeling lonely?",
+
+        "I'm feeling pretty down because of my lack of social interaction, any recommendations on how to stay connected with others and avoid feeling lonely?",
+
+        "Loneliness has been creeping in lately, do you have any suggestions on how I can maintain my social connections?",
+
+        "I've been feeling a bit disconnected from others, any tips on how to stay social and avoid feeling lonely?",
+
+        "How can I stay connected with others during these times of social distancing? I'm starting to feel quite lonely.",
+
+        "I'm struggling with loneliness, any ideas on how I can maintain social connections and avoid feeling so isolated?"
+      ],
+      "responses": [
+        "Think about the different ways to connect that are most meaningful for you, then make a plan with your social networks. Check in on people who may not be online. Join local community support groups and specialized support groups.",
+        "Reach out to your connections, suggest ways to keep in touch and set a regular time to connect. Look for opportunities to make new connections, such as joining local community support groups or specialized support groups.",
+        "Mindlessly scrolling through social media usually doesn't build strong social connections. Focus on strategies that actually make you feel included and connected. If your current strategies don't help you feel connected, problem-solve to find a solution.",
+        "Reach out to the connections you do have, suggest ways to keep in touch, and set a regular time to connect. Look for local community support groups and mutual aid groups on social media. Join specialized support groups to seek help and support.",
+        "Video chat with close friends in the evening, phone a family member once a week, and check in on people who may not be online. Join local community support groups and specialized support groups to make new connections.",
+        "Reach out to your connections, suggest ways to keep in touch, and set a regular time to connect. Join local community support groups and specialized support groups to make new connections. Look for opportunities to share your skills and abilities or seek help and support.",
+        "Focus on strategies that actually make you feel included and connected. Join local community support groups and specialized support groups to make new connections. Look for opportunities to share your skills and abilities or seek help and support. Problem-solve to find a solution that works for you."
+      ]
+    },
+    {
+      "tag": "fact-31",
+      "patterns": [
+        "Have you ever wondered how anxiety and stress differ from each other?",
+        "Are you curious about the distinction between stress and anxiety?",
+        "Do you know the difference between feeling anxious and feeling stressed?",
+        "Are you confused about whether you're experiencing stress or anxiety?",
+        "What sets anxiety apart from stress, in terms of symptoms and causes?",
+        "Have you ever felt like you're stressed and anxious at the same time, but not sure which is which?",
+        "Are you interested in learning about the nuances between anxiety and stress?",
+        "How do you differentiate between stress and anxiety when you're feeling overwhelmed?",
+        "What distinguishes anxiety from stress, and how can you tell which one you're experiencing?",
+        "Can you tell the difference between feeling stressed and having anxiety, or are they the same thing?"
+      ],
+      "responses": [
+        "While there is overlap between stress and anxiety, they are not exactly the same thing. Stress is related to external pressures that are causing us difficulty, while anxiety is focused on fears or worries about potential threats.",
+        "Stress can trigger feelings of anxiety, especially if the stressors are ongoing or overwhelming.",
+        "The physical symptoms of stress and anxiety can be very similar, but stress is usually related to external pressures and anxiety is focused on fears or worries about potential threats.",
+        "Stress is often caused by external pressures, such as work deadlines, financial problems, or relationship issues. Anxiety can be caused by a range of factors, including genetics, life experiences, and ongoing stress.",
+        "Yes, there are several different types of anxiety disorders, including generalized anxiety disorder, panic disorder, social anxiety disorder, and specific phobias.",
+        "There are a variety of techniques that can help manage stress and anxiety, such as exercise, deep breathing, mindfulness meditation, and talking to a therapist.",
+        "If stress or anxiety is impacting your daily life or well-being, it may be helpful to seek professional help from a therapist or mental health provider."
+      ]
+    },
+    {
+      "tag": "fact-32",
+      "patterns": [
+        "Can you help me understand the difference between feeling sad and being depressed?",
+        "I'm not sure if I'm just sad or if I'm actually experiencing depression. What's the difference?",
+        "I'm feeling down lately, but I'm not sure if it's sadness or depression. How can I tell the difference?",
+        "When does sadness turn into depression? Is there a clear distinction?",
+        "I've been feeling low for a while now, but I'm not sure if I'm just sad or if it's something more. Can you explain the difference between sadness and depression?",
+        "I've been feeling really down lately and I'm not sure if it's just a passing sadness or something more serious like depression. How can I tell the difference?",
+        "I'm experiencing feelings of sadness, but I'm worried it might be depression. What's the difference?",
+        "What distinguishes sadness from depression? Can you clarify the differences between the two?",
+        "I'm having trouble distinguishing between sadness and depression. Can you help me understand the difference?",
+        "What are the defining differences between sadness and depression? I'm feeling low and I want to know if it's just sadness or something more serious."
+      ],
+      "responses": [
+        "Sadness is a normal human emotion that arises in response to a loss, disappointment, problems, or other difficult situations. It is a temporary feeling that usually goes away quickly.",
+        "Depression is a mental illness that affects a person's mood, understanding of oneself, and the way they understand and relate to things around them. It is much more severe than feeling sad and lasts for a long time.",
+        "While sadness is a normal human emotion that is temporary and usually goes away quickly, depression is a mental illness that lasts for a long time and can severely impact a person's life.",
+        "Symptoms of depression include feeling worthless or hopeless, unreasonable guilt, irritability, difficulty concentrating, loss of interest in activities, physical symptoms like problems with sleep, appetite, energy, and unexplainable aches or pains, and thoughts of suicide or death.",
+        "No, feeling sad is a normal human emotion that is temporary, while depression is a mental illness that lasts for a long time and can severely impact a person's life.",
+        "Depression lasts longer than two weeks and doesn't usually go away on its own.",
+        "Yes, depression is a real illness, and it is very treatable. It's important to seek help if you're concerned about depression."
+      ]
+    }
+  ]
+}

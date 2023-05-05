@@ -1,0 +1,44 @@
+{
+    "User": [
+        "Hey!",
+        "How are you?",
+        "I'm Doing good.",
+        "Hey can you help me with something?",
+        "I feel left out from my family.",
+        "what do you mean no problem. it is a serious issue.",
+        "you are not making any sense right now.",
+        "yeah about my family neglecting me.",
+        "im just so angry all the time.",
+        "nothing. just they arent there for me. at least that's how i feel",
+        "you are not making any sense",
+        "u are broken ."
+    ],
+    "EMMA": [
+        "Hello there.",
+        "I'm fine and you.",
+        "Good to hear.",
+        "Anything.",
+        "No problem.",
+        "It was just that i don't know how much time we have. ",
+        "Oh I see. Do you want to talk about something?",
+        "I'm listening. Please go on.",
+        "What did he say?",
+        "Call me Emma",
+        "I am Emma, Your friend.",
+        "So what do we have to talk?"
+    ],
+    "Emotion": [
+        0,
+        0,
+        0,
+        0,
+        "sadness",
+        0,
+        0,
+        "sadness",
+        "anger",
+        0,
+        0,
+        "sadness"
+    ]
+}
