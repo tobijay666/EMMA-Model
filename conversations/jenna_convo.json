@@ -1,23 +1,23 @@
 {
-    "KT": [
+    "jenna": [
         0,
         0,
         0,
-        "what can you do?",
-        "what can you do?"
+        "hey",
+        "i'm good, and you?"
     ],
     "EMMA": [
         0,
         0,
         0,
-        "Talking to you, of course!",
-        "Talking to you, of course!"
+        "Hello! how are you?",
+        "Yes!"
     ],
     "Emotion": [
         0,
         0,
         0,
         0,
-        0
+        "joy"
     ]
 }

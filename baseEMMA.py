@@ -71,11 +71,12 @@ def baseEMMA(inputTxt,userName):
                 # Checking if the tag is in the intents
                 if tag == intent["tag"]:
                     modelResponse = random.choice(intent['responses'])
-                    return (f"{modelResponse}")
                     # Analysing the User's sentiment
                     sentiment_Analysis = sentimentAnalyser(user_input)
                     #  Inserting the instance into the memory module
                     instanceMemoryModule(user_input,modelResponse,sentiment_Analysis,userName)
+                    return (f"{modelResponse}")
+                    
 
 
 

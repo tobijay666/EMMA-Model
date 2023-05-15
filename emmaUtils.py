@@ -64,92 +64,39 @@ def userInputCheck(user_input):
     # Time Complexity : O(n)
     # Space Complexity : O(1)
 
-# def instanceMemoryModule(user_input,generated_reply,sentiment,userName):
-    # with open('current_convo.json','r+') as file:
-    #       # First we load existing data into a dict.
-    #     if len(sentiment) == 0 :
-    #         try:
-    #             file_data = json.load(file)
-    #             file_data[userName].append(user_input)
-    #             file_data["EMMA"].append(generated_reply)
-    #             file_data["Emotion"].append(0)
-    #         except:
-    #             file_data = {
-    #             userName : [0,0,0,user_input],
-    #             "EMMA" : [0,0,0,generated_reply],
-    #             "Emotion" : [0,0,0,0]
-    #             }
-    #     else:
-    #         try:
-    #             file_data = json.load(file)
-    #             file_data[userName].append(user_input)
-    #             file_data["EMMA"].append(generated_reply)
-    #             file_data["Emotion"].append(sentiment[1])
-    #         except:
-    #             file_data = {
-    #             userName : [0,0,0,user_input],
-    #             "EMMA" : [0,0,0,generated_reply],
-    #             "Emotion" : [0,0,0,sentiment[1]]
-    #             }
 
-    #     # Sets file's current position at offset.
-    #     file.seek(0)
-    #     # convert back to json.
-    #     json.dump(file_data, file, indent = 4)
 
-    ##new one
-    # with open('current_convo.json', 'r+') as file:
-    #     try:
-    #         file_data = json.load(file)
-    #     except:
-    #         file_data = {
-    #             userName : [0,0,0,user_input],
-    #             "EMMA" : [0,0,0,generated_reply],
-    #             "Emotion" : [0,0,0,0]
-    #         }
-            
-    #     if len(sentiment) == 0:
-    #         file_data[userName].append(user_input)
-    #         file_data["EMMA"].append(generated_reply)
-    #         file_data["Emotion"].append(0)
-    #     else:
-    #         file_data[userName].append(user_input)
-    #         file_data["EMMA"].append(generated_reply)
-    #         file_data["Emotion"].append(sentiment[1])
-            
-    #     file.seek(0)
-    #     json.dump(file_data, file, indent=4)
+def instanceMemoryModule(user_input, generated_reply, sentiment, userName):
+    filename = f"conversations/{userName}_convo.json"
+    try:
+        with open(filename, 'r+') as file:
+            file_data = json.load(file)
+            if len(sentiment) == 0:
+                file_data[userName].append(user_input)
+                file_data["EMMA"].append(generated_reply)
+                file_data["Emotion"].append(0)
+            else:
+                file_data[userName].append(user_input)
+                file_data["EMMA"].append(generated_reply)
+                file_data["Emotion"].append(sentiment[1])
+            file.seek(0)
+            json.dump(file_data, file, indent=4)
+    except FileNotFoundError:
+        file_data = {
+            userName: [0, 0, 0, user_input],
+            "EMMA": [0, 0, 0, generated_reply],
+            "Emotion": [0, 0, 0, 0]
+        }
+        with open(filename, 'w+') as file:
+            json.dump(file_data, file, indent=4)
 
-def instanceMemoryModule(user_input,generated_reply,sentiment,userName):
-    filename = f"{userName}_convo.json"
-        try:
-            with open(filename, 'r+') as file:
-                file_data = json.load(file)
-        except:
-            file_data = {
-                userName : [0,0,0,user_input],
-                "EMMA" : [0,0,0,generated_reply],
-                "Emotion" : [0,0,0,0]
-            }
-            
-        if len(sentiment) == 0:
-            file_data[userName].append(user_input)
-            file_data["EMMA"].append(generated_reply)
-            file_data["Emotion"].append(0)
-        else:
-            file_data[userName].append(user_input)
-            file_data["EMMA"].append(generated_reply)
-            file_data["Emotion"].append(sentiment[1])
-            
-        file.seek(0)
-        json.dump(file_data, file, indent=4)
-
-def previousDialogues():
+def previousDialogues(userName):
     # load the current_convo.json 
     # list the conversations
     # get the last 4 dialogs both user and emma
     import json
-    with open('current_convo.json','r+') as file:
+    filename = f"conversations/{userName}_convo.json"
+    with open(filename,'r+') as file:
           # First we load existing data into a dict.
         try:
             file_data = json.load(file)
@@ -191,7 +138,7 @@ def modelIn( user_input,sentiment,userName):
         prompt = f"Your name is Emma.You are having a conversation with your friend {userName}. He is {sentiment[0]} and feeling {sentiment[1]}.You are empathetic,kind and You should make {userName} feel happy :"
     
     else:
-        prompt = f"Your name is Emma..You are having a conversation with {userName}.You are empathetic,kind and You should make {userName} feel happy:"
+        prompt = f"Your name is Emma.You are having a conversation with {userName}.You are empathetic,kind and You should make {userName} feel happy:"
 
     
     
@@ -218,12 +165,14 @@ def modelIn( user_input,sentiment,userName):
     #     # 2. user_input
     #     # 3. previous conversation
 
-    previous_Dialogues = previousDialogues()
+    previous_Dialogues = previousDialogues(userName)
 
     # Base Prompt Optimization 2 - Including Previous Dialogues
     if (previous_Dialogues != 0):
+        flag = False
         Feeding_Prompt = f"{prompt} \n {userName}: {previous_Dialogues[0]}  \n You:{previous_Dialogues[1]}\n {userName}: {previous_Dialogues[2]}  \n You:{previous_Dialogues[3]}\n {userName}: {previous_Dialogues[4]}  \n You:{previous_Dialogues[5]}\n {userName}: {previous_Dialogues[6]}  \n You:{previous_Dialogues[7]} \n {userName}: {user_input} \n You:"
     else:
+        flag = True
         Feeding_Prompt = f"{prompt} \n {userName}: {user_input} \n You:"
 
     # rest of the bloom model
@@ -232,14 +181,14 @@ def modelIn( user_input,sentiment,userName):
     input_ids = tokenizer(Feeding_Prompt, return_tensors='pt').to('cpu')
 
     # generating a reply in numerial tensor format
-    sample = model.generate(**input_ids, max_length=150, top_k=1, temperature=0.9, repetition_penalty = 2.0)
+    sample = model.generate(**input_ids, max_length=175, top_k=1, temperature=0.9, repetition_penalty = 2.0)
 
     # printing the generated and decoded reply
     # print(tokenizer.decode(sample[0]))
 
     # decoding the generated reply
     fullResponse = (tokenizer.decode(sample[0], truncate_before_pattern = [r"\n\n^#","^\n"]))
-    # print(fullResponse)
+    ## print(fullResponse)
 
     # dividing the generated data into lines
     dividedResponse = fullResponse.split("\n")
@@ -247,7 +196,10 @@ def modelIn( user_input,sentiment,userName):
     ## divided response into a seperate function
     print(dividedResponse, '\n',sentiment)
 
-    reply = responseCreator( dividedResponse[10])
+    if(flag):
+        reply = responseCreator(dividedResponse[2])
+    else:
+        reply = responseCreator( dividedResponse[10])
 
     instanceMemoryModule(user_input,reply[1],sentiment,userName)
 
